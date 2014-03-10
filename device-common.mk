@@ -29,7 +29,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_UTC_DATE=0 \
     wifi.interface=wlan0 \
 	ro.zram.default=18 \
-    wifi.supplicant_scan_interval=180
+    wifi.supplicant_scan_interval=180 \
+    ro.opengles.surface.rgb565=true \
+    debug.hwui.render_dirty_regions=false \
+    # GPU producer to CPU consumer not supported
+    ro.bq.gpu_to_cpu_unsupported=1 \
+    ro.zygote.disable_gl_preload=true \
+    # Render UI with GPU
+    debug.sf.hw=1 \
+    # Fuse storage
+    persist.fuse_sdcard=true
 	
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -47,8 +56,8 @@ PRODUCT_PACKAGES += \
     sensors.tegra
 
 # HW Composer proxy
-PRODUCT_PACKAGES += \
-    hwcomposer.tegra
+#PRODUCT_PACKAGES += \
+#    hwcomposer.tegra
 	
 # Media
 PRODUCT_COPY_FILES += \
@@ -59,6 +68,7 @@ PRODUCT_COPY_FILES += \
 # These are the hardware-specific feature permissions this was commented out
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml \
+        frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
 	frameworks/native/data/etc/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml \
 	frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
 	frameworks/native/data/etc/android.hardware.location.xml:system/etc/permissions/android.hardware.location.xml \
@@ -91,7 +101,8 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_PACKAGES += \
 	com.android.future.usb.accessory \
-	libnetcmdiface 
+	libnetcmdiface \
+	libemoji
   
 # Filesystem management tools
 PRODUCT_PACKAGES += \
