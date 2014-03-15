@@ -30,10 +30,10 @@ int device_handle_key(int key_code, int visible) {
             case KEY_UP:
             case KEY_VOLUMEUP:
             case KEY_HOMEPAGE:
+            case KEY_HOME:
                 return HIGHLIGHT_UP;
 
             case KEY_SEARCH:
-            case KEY_HOME:
                 return SELECT_ITEM;
 
             case KEY_POWER:
