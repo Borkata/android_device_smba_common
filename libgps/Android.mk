@@ -1,3 +1,5 @@
+ifeq  ($(strip $(BOARD_SMBA)),true)
+
 ifeq ($(BOARD_USES_NMEA_GPS),true)
   LOCAL_PATH := $(call my-dir)/nmea
 
@@ -35,7 +37,7 @@ ifeq ($(BOARD_USES_NMEA_GPS),true)
   LOCAL_SRC_FILES := \
 	../gpslib.c
 
-  LOCAL_MODULE := gps.tegra
+  LOCAL_MODULE := gps.harmony
 
   LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
 
@@ -53,3 +55,6 @@ ifeq ($(BOARD_USES_NMEA_GPS),true)
   LOCAL_PRELINK_MODULE := false
   include $(BUILD_SHARED_LIBRARY)
 endif
+
+endif
+

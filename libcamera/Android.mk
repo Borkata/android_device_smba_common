@@ -1,3 +1,5 @@
+ifeq  ($(strip $(BOARD_SMBA)),true)
+
 BUILD_OLD_LIBCAMERA:=
 
 ifneq ($(BUILD_TINY_ANDROID),true)
@@ -30,4 +32,6 @@ LOCAL_MODULE_TAGS:= optional
 include $(BUILD_SHARED_LIBRARY)
 
 endif # not BUILD_TINY_ANDROID
+
+endif
 
