@@ -36,6 +36,8 @@ TARGET_ARCH_VARIANT_FPU := vfpv3-d16
 TARGET_CPU_SMP := true
 TARGET_CPU_VARIANT := generic
 
+BOARD_SMBA := true
+
 # Compiler Optimization - This is a @codefireX specific flag to use -O3 everywhere.
 ARCH_ARM_HIGH_OPTIMIZATION := true
 # ANDROID, LINUX-ARM AND TLS REGISTER EMULATION
@@ -57,9 +59,7 @@ TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 
 #platform
 TARGET_NO_RADIOIMAGE := true
-TARGET_BOARD_PLATFORM := tegra
-TARGET_BOOTLOADER_BOARD_NAME := harmony
-BOARD_EGL_NEEDS_LEGACY_FB := false
+BOARD_EGL_NEEDS_LEGACY_FB := true
 
 #audio
 BOARD_USES_GENERIC_AUDIO := true
