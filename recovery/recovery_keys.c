@@ -23,14 +23,16 @@ int device_handle_key(int key_code, int visible) {
             case KEY_CAPSLOCK:
             case KEY_DOWN:
             case KEY_VOLUMEDOWN:
+            case KEY_MENU:
                 return HIGHLIGHT_DOWN;
 
-            case KEY_MENU:
             case KEY_LEFTSHIFT:
             case KEY_UP:
             case KEY_VOLUMEUP:
+            case KEY_HOMEPAGE:
                 return HIGHLIGHT_UP;
 
+            case KEY_SEARCH:
             case KEY_HOME:
                 return SELECT_ITEM;
 
@@ -43,9 +45,8 @@ int device_handle_key(int key_code, int visible) {
             case KEY_SEND:
             case KEY_END:
             case KEY_BACKSPACE:
-            case KEY_SEARCH:
             case KEY_BACK:
-                if (ui_menu_level > 0) {
+                if (!ui_root_menu) {
                     return GO_BACK;
                 }
         }
