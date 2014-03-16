@@ -14,7 +14,9 @@
 # limitations under the License.
 #
 
-TARGET_BOOTANIMATION_NAME := horizontal-1024x600
+# Boot animation
+TARGET_SCREEN_HEIGHT := 600
+TARGET_SCREEN_WIDTH := 1024
 
 # Harmony Configs
 PRODUCT_COPY_FILES += \
