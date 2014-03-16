@@ -114,14 +114,6 @@ PRODUCT_PACKAGES += \
 
 DEVICE_PACKAGE_OVERLAYS += device/malata/smba_common/overlay
 
-# for bugmailer
-ifneq ($(TARGET_BUILD_VARIANT),user)
-	PRODUCT_PACKAGES += send_bug
-	PRODUCT_COPY_FILES += \
-		system/extras/bugmailer/bugmailer.sh:system/bin/bugmailer.sh \
-		system/extras/bugmailer/send_bug:system/bin/send_bug
-endif
-
 # prefer mdpi drawables where available
 PRODUCT_AAPT_CONFIG := normal mdpi hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := mdpi
