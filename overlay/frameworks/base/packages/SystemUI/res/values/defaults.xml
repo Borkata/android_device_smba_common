@@ -18,6 +18,4 @@
 -->
 <resources>
     <bool name="config_recents_interface_for_tablets">true</bool>
-    <string name="notifications_off_title">Notifications off</string>
-    <string name="notifications_off_text">Tap here to turn notifications back on.</string>
 </resources>
