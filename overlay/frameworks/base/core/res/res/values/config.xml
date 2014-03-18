@@ -243,11 +243,11 @@ that matches the signature of at least one package on this list.
         <item>com.google.android.location</item>
     </string-array>
 
- <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
-    <bool name="config_intrusiveBatteryLed">false</bool>
+ <!-- Is the battery LED intrusive? Used to decide if there should be a disable option
+    <bool name="config_intrusiveBatteryLed">false</bool> -->
 
- <!-- Can we change the battery color? -->
-    <bool name="config_multiColorBatteryLed">false</bool>
+ <!-- Can we change the battery color? 
+    <bool name="config_multiColorBatteryLed">false</bool> -->
 
  <!-- Setting this true forces the headset jack switches to use the/dev/input/event subsystem
 rather than the uevent framework. -->
