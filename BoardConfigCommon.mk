@@ -66,6 +66,7 @@ BOARD_USES_GENERIC_AUDIO := false
 BOARD_USES_AUDIO_LEGACY := false
 BOARD_USES_ALSA_AUDIO := false
 BOARD_OMX_NEEDS_LEGACY_AUDIO := true
+BOARD_HAVE_PRE_KITKAT_AUDIO_BLOB := true
 
 BOARD_USES_GENERIC_INVENSENSE := false
 
@@ -122,13 +123,6 @@ BOARD_USES_SECURE_SERVICES := true
 
 TARGET_OTA_ASSERT_SKIP := true
 
-# Preload bootanimation in to memory
-TARGET_BOOTANIMATION_PRELOAD := true
-TARGET_BOOTANIMATION_TEXTURE_CACHE := true
-TARGET_BOOTANIMATION_USE_RGB565 := true
-TARGET_SCREEN_WIDTH := 1024
-TARGET_SCREEN_HEIGHT := 600
-
 # Override healthd HAL
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.harmony
 
@@ -140,7 +134,7 @@ ifeq ($(HAVE_SELINUX),true)
 	#POLICYVERS := 24
 
 	BOARD_SEPOLICY_DIRS += \
-	device/malata/smba_common/sepolicy
+	device/notionink/adam_common/sepolicy
  
 BOARD_SEPOLICY_UNION := \
     file_contexts \
