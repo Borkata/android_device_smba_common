@@ -134,7 +134,7 @@ ifeq ($(HAVE_SELINUX),true)
 	#POLICYVERS := 24
 
 	BOARD_SEPOLICY_DIRS += \
-	device/notionink/adam_common/sepolicy
+	device/malata/smba_common/sepolicy
  
 BOARD_SEPOLICY_UNION := \
     file_contexts \
